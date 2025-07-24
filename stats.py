@@ -1,3 +1,5 @@
+from main import get_book_text
+
 def count_words(text):
     contents = get_book_text(text)
     num_words = contents.split()
