@@ -1,7 +1,3 @@
-from main import get_book_text
-
-def count_words(text):
-    contents = get_book_text(text)
+def get_num_words(contents):
     num_words = contents.split()
-
     return f"{len(num_words)} words found in the document"

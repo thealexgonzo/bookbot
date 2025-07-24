@@ -1,3 +1,5 @@
+from stats import get_num_words
+
 def get_book_text(path_to_file):
 
     with open(path_to_file) as f:
@@ -5,12 +7,12 @@ def get_book_text(path_to_file):
     
     return file_contents
 
-from stats import count_words
-
 def main(path_to_file):
-    contents = get_book_text(path_to_file)
-    print(contents)
+    book = get_book_text(path_to_file)
+    
+    word_count = get_num_words(book)
+
+    print(word_count)
 
 
 main("books/frankenstein.txt")
-print(count_words("books/frankenstein.txt"))
