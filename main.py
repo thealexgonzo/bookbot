@@ -1,3 +1,4 @@
+from sys import argv
 from stats import get_num_words
 from stats import count_characters
 from stats import sort_on
@@ -27,6 +28,8 @@ def main(path_to_file):
     print("\n============= END ===============")
 
     
+if(len(argv) != 2):
+    raise Exception("Usage: python3 main.py <path_to_book>")
+else:
+    main(argv[1])
 
-
-main("books/frankenstein.txt")
